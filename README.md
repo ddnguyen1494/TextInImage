@@ -1,11 +1,12 @@
 # TextInImage
-Steganography is the practice of hiding of secret messages within another medium. TextInImage is a python3 program that encode/decode text messages in an image by reading/writing each bit of the message to the least significant bit of every pixel.
+TextInImage is a python3 program that hides text messages in an image. It embeds the data in the image by breaking down the message length and message into bits and modifying the least significant bit of every pixel's RGB values. It decodes the message by reading the all the least significant bits then reconstruct the message.
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine.
 
 ### Prerequisites
 [Python3](https://www.python.org/)
+[pip Package Manager](https://pip.pypa.io/en/stable/#)
 
 ### Installing
 Install dependencies 
@@ -14,10 +15,10 @@ Install dependencies
 ### Examples
 * Embed image with the souce code
  
-`python StegaImage.py -x ./TestImages/meme.png`
+`python3 StegaImage.py -x ./TestImages/meme.png`
 * Extracting the message
 
-`python StegaImage.py -e StegaImage.py `
+`python3 StegaImage.py -e StegaImage.py `
 
 ## Built With
 [bitarray](https://pypi.python.org/pypi/bitarray)
