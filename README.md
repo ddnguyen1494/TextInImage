@@ -5,8 +5,8 @@ TextInImage is a python3 program that hides text messages in an image. It embeds
 These instructions will get you a copy of the project up and running on your local machine.
 
 ### Prerequisites
-[Python3](https://www.python.org/)
-[pip Package Manager](https://pip.pypa.io/en/stable/#)
+* [Python3](https://www.python.org/)
+* [pip Package Manager](https://pip.pypa.io/en/stable/#)
 
 ### Installing
 Install dependencies 
