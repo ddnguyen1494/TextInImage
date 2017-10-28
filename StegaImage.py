@@ -9,7 +9,8 @@ HELP_MESSAGE = """
 
     Description:
         * The steganography utility either extracts text from image and print to standard output or embed text file in images.
-        * The input image should be in jpg format.
+        * The input image for embedding should be in jpg format.
+        * Images with embedded message should be in png format.
         * Output is either the embedded message or a new image in png format.
 
     Usage:
@@ -17,8 +18,8 @@ HELP_MESSAGE = """
         python StegaImage.py -e input_text_file input_image: Embed input_text_file in input_image
 
     Example:
-        python StegaImage.py -x ./TestImages/meme.png
-        python StegaImage.py -e StegaImage.py ./TestImages/meme.jpg
+        python3 StegaImage.py -x image.png
+        python3 StegaImage.py -e test.txt image.jpg
     """
 
 def replace_least_sig_bit(band, bit):
@@ -122,7 +123,7 @@ def main(argv):
     """Process arguments and calling approriate methods to handle task"""  
     if len(argv) < 2 or argv[1] == "-h":
         print(HELP_MESSAGE)
-    elif argv[1] == "-x" and leng(argv) == 3 :
+    elif argv[1] == "-x" and len(argv) == 3 :
         extract_message(argv[2])
     elif argv[1] == "-e" and len(argv) == 4:
         embed_message(argv[2], argv[3])
